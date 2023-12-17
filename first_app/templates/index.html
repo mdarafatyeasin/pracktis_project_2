@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<body>
+    <h2>Hello app</h2>
+</body>
+
+<div class=" flex-wrap d-flex justify-content-center gap-3 p-1 w-75 m-auto">
+    {% for i in data %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{i.strMealThumb}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{i.strMeal}}</h5>
+            <p class="card-text">{{i.idMeal}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
